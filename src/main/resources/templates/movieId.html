@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
 <title>movie id</title>
 </head>
 <body>
 	
-	<h1 th:text="${film}"></h1>
+	<h1 th:text="${film != null ? film : 'no film'}"></h1>
+	
 
 </body>
 </html>

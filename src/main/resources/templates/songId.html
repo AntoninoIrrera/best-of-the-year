@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
 <title>song id</title>
 </head>
 <body>
-<h1 th:text="${song}"></h1>
+	<h1 th:text="${song != null ? song : 'no song'}"></h1>
 </body>
 </html>

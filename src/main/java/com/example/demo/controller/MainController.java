@@ -122,7 +122,18 @@ public class MainController {
 	@GetMapping("/movies/{id}")
 	public String moviesId(Model model,@PathVariable("id") int id) {
 		
-		Movie movie = getBestMovies().get(id - 1);
+//		Movie movie = getBestMovies().get(id - 1);
+		
+		Movie movie = null;
+		
+		for (Movie movieString : getBestMovies()) {
+			
+			if(movieString.getId() == id) {
+				movie = movieString;
+			}
+			
+		}
+		
 		
 		model.addAttribute("film", movie);
 		
@@ -133,7 +144,17 @@ public class MainController {
 	@GetMapping("/songs/{id}")
 	public String songsId(Model model,@PathVariable("id") int id) {
 		
-		Song song = getBestSongs().get(id - 1);
+//		Song song = getBestSongs().get(id - 1);
+		
+		Song song = null;
+		
+		for (Song songString : getBestSongs()) {
+			
+			if(songString.getId() == id) {
+				song = songString;
+			}
+			
+		}
 		
 		model.addAttribute("song", song);
 		
