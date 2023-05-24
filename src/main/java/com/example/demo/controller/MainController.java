@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.classi.Movie;
 import com.example.demo.classi.Song;
@@ -15,9 +16,9 @@ import com.example.demo.classi.Song;
 public class MainController {
 
 	@GetMapping("/")
-	public String root(Model model) {
+	public String root(Model model,@RequestParam(name = "name") String name) {
 		
-		model.addAttribute("nome", "antonio");
+		model.addAttribute("nome", name);
 		
 		return "rootView";
 		
