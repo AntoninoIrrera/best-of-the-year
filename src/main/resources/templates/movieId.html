@@ -8,8 +8,9 @@
 <body>
 	
 	<h1 th:text="${film != null ? film : 'no film'}"></h1>
-	<div th:replace="frag/header.html :: movies"></div>
-	<div th:replace="frag/header.html :: songs"></div>
+		
+	<div th:replace="~{frag/header :: movies}"></div>
+	<div th:replace="~{frag/header :: songs}"></div>
 	<a class="btn btn-primary" 
       
        th:href="@{/?name=antonio}"

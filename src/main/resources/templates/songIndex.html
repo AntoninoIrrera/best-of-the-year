@@ -6,9 +6,9 @@
 <title>song</title>
 </head>
 <body>
-	<div th:replace="frag/header.html :: titolo"></div>
-	<div th:replace="frag/header.html :: movies"></div>
-	<div th:replace="frag/header.html :: songs"></div>
+		<h1>Best Songs</h1>
+	<div th:replace="~{frag/header :: movies}"></div>
+	<div th:replace="~{frag/header :: songs}"></div>
 	<ul>
 		<li th:each="song : ${songs}">
 			<a th:text="${song.titolo}" th:href="@{/songs/{id} (id=${song.id})}"></a>
