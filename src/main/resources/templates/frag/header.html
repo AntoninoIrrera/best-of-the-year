@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}"/>
+<title>Insert title here</title>
+</head>
+<body>
+		
+
+	<h1 class="d-inline-block" th:fragment="titolo">
+		Best of
+	</h1>	
+		
+	 <a class="btn btn-primary" 
+       th:fragment="movies" 
+       th:href="@{/movies}"
+       >
+      	Movies
+    </a>
+     <a class="btn btn-primary"
+       th:fragment="songs" 
+       th:href="@{/songs}"
+       >
+      	Song
+    </a>
+	
+</body>
+</html>

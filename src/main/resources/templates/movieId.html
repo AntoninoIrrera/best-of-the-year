@@ -2,12 +2,20 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
+<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}"/>
 <title>movie id</title>
 </head>
 <body>
 	
 	<h1 th:text="${film != null ? film : 'no film'}"></h1>
-	
+	<div th:replace="frag/header.html :: movies"></div>
+	<div th:replace="frag/header.html :: songs"></div>
+	<a class="btn btn-primary" 
+      
+       th:href="@{/?name=antonio}"
+       >
+      	home
+    </a>
 
 </body>
 </html>

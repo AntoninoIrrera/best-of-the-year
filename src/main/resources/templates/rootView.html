@@ -2,9 +2,17 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
+<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}"/>
 <title>Best</title>
 </head>
 <body>
+	<div th:replace="frag/header :: titolo"></div>
+	<div th:replace="frag/header :: movies"></div>
+	<div th:replace="frag/header :: songs"></div>
+	
 	<h1 th:text="'Best of the year by ' + ${nome}"></h1>
+	<img alt="logo" th:src="@{logo.jpg}" />
+	<p>lorem upsu</p>
+	
 </body>
 </html>

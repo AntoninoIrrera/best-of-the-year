@@ -27,28 +27,28 @@ public class MainController {
 	@GetMapping("/movies")
 	public String movies(Model model) {
 		
-		String film = null;
+//		String film = null;
+//		
+//		int count = 1;
+//		
+//		for (Movie filmString : getBestMovies()) {
+//			
+//			if(count == 1) {
+//				film = filmString.getTitolo() + ",";
+//				count++;
+//			}else if(count != getBestMovies().size()) {
+//
+//				film += filmString.getTitolo() + ",";
+//				count++;
+//				
+//			}else {
+//				film += filmString.getTitolo();
+//				count++;
+//			}
+//			
+//		}
 		
-		int count = 1;
-		
-		for (Movie filmString : getBestMovies()) {
-			
-			if(count == 1) {
-				film = filmString.getTitolo() + ",";
-				count++;
-			}else if(count != getBestMovies().size()) {
-
-				film += filmString.getTitolo() + ",";
-				count++;
-				
-			}else {
-				film += filmString.getTitolo();
-				count++;
-			}
-			
-		}
-		
-		model.addAttribute("film", film);
+		model.addAttribute("films", getBestMovies());
 		
 		
 		return "movieIndex";
@@ -57,28 +57,28 @@ public class MainController {
 	@GetMapping("/songs")
 	public String songs(Model model) {
 		
-	String song = null;
+//	String song = null;
+//		
+//		int count = 1;
+//		
+//		for (Song songString : getBestSongs()) {
+//			
+//			if(count == 1) {
+//				song = songString.getTitolo() + ",";
+//				count++;
+//			}else if(count != getBestSongs().size()) {
+//
+//				song += songString.getTitolo() + ",";
+//				count++;
+//				
+//			}else {
+//				song += songString.getTitolo();
+//				count++;
+//			}
+//			
+//		}
 		
-		int count = 1;
-		
-		for (Song songString : getBestSongs()) {
-			
-			if(count == 1) {
-				song = songString.getTitolo() + ",";
-				count++;
-			}else if(count != getBestSongs().size()) {
-
-				song += songString.getTitolo() + ",";
-				count++;
-				
-			}else {
-				song += songString.getTitolo();
-				count++;
-			}
-			
-		}
-		
-		model.addAttribute("song", song);
+		model.addAttribute("songs", getBestSongs());
 		
 		
 		return "songIndex";
